@@ -9,4 +9,3 @@ venv/
 runs/
 training/
 dataset/
-best.pt
