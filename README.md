@@ -48,6 +48,10 @@ Set-Location 'C:\Users\subho\Desktop\Code\Nivara'
 
 The dashboard uses `best.pt` beside `main.py` when it exists. Without it, the dashboard still runs, but image detection remains in demo mode.
 
+## Deploy on Streamlit Community Cloud
+
+Set `main.py` as the app entry point. Streamlit Cloud installs Python packages from `requirements.txt` and Linux system packages from `packages.txt`. The latter includes OpenGL and GLib libraries needed by OpenCV on Linux.
+
 ## Train the YOLO model
 
 Training runs locally on the CPU for 50 epochs with 640-pixel images, batch size 8, and 2 workers.
@@ -80,6 +84,6 @@ Keep the API key in your local environment; never commit it to the repository.
 
 ## Data and model privacy
 
-The current `dataset/data.yaml` identifies the dataset license as **Private**. `.gitignore` now prevents future additions of `dataset/` and `best.pt`, but ignore rules do not remove files that are already tracked in Git history. Do not push or share this repository outside authorized collaborators until you have permission to share those files or have removed them from the repository history. The current local repository has no remote configured.
+The current `dataset/data.yaml` identifies the dataset license as **Private**. Keep the dataset out of shared repositories unless you have permission to share it. The deployed `best.pt` model is also derived from that dataset; confirm its terms allow sharing the model weights. Ignore rules do not remove files already tracked in Git history.
 
 If you clone this repository without the private files, provide an authorized local dataset and train your own `best.pt`.
