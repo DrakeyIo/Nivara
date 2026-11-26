@@ -1,0 +1,12 @@
+@'
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+runs/
+training/
+'@ | Set-Content -Encoding utf8 .gitignore

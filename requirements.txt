@@ -1,0 +1,9 @@
+streamlit
+numpy
+pandas
+plotly
+folium
+streamlit-folium
+Pillow
+ultralytics
+roboflow
